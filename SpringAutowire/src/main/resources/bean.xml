@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:aop="http://www.springframework.org/schema/aop"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-3.0.xsd
+    http://www.springframework.org/schema/aop 
+    http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
+ 
+   
+    
+    <bean id="p" class="com.autowire.Person"  autowire="byType">
+    <property name="name" value="Harry"></property>
+    <property name="salary" value="50000"></property>
+    </bean>
+    
+    <bean id="c" class="com.autowire.Car">
+    <property name="name" value="BMW"></property>
+    <property name="quantity" value="2"></property>
+   
+    </bean>
+    
+   <bean id="bank" class="com.autowire.BankDetails">
+   <property name="BankName" value="HDFC"></property>
+   <property name="type" value="saving"></property>
+   <property name="accountNo" value="123"></property>
+   </bean>
+    
+    
+    <!--  /*AutoWire
+	  * byName means exact name finding
+	  * byType means DataType 
+	  * 
+	  * */
+     -->
+   
+</beans>
+ 
